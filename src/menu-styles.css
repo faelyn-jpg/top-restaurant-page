@@ -1,0 +1,19 @@
+.menu-container {
+  display: flex;
+  justify-content: center;
+}
+.menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.category-heading {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.menu > h1 {
+  text-align: center;
+  grid-column: span 3;
+}

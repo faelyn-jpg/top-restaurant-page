@@ -2,6 +2,7 @@ export default function PageLoad() {
   const main = document.querySelector('#content')
 
   const addContent = () => {
+    const container = document.createElement('main-container')
     const background = document.createElement('div')
     const hero = document.createElement('div')
     const info = document.createElement('div')
@@ -9,6 +10,7 @@ export default function PageLoad() {
     const address = document.createElement('div')
     const map = document.createElement('div')
     const openHours = document.createElement('div')
+    container.classList.add('container')
     background.classList.add('background')
     hero.classList.add('hero')
     info.classList.add('info')
@@ -20,11 +22,17 @@ export default function PageLoad() {
     address.textContent = "Here's the address info"
     map.textContent = "There's meant to be a map here"
     openHours.textContent = 'Opening Hours:'
-    main.append(background, info)
+    main.appendChild(container)
+    container.append(background, info)
     background.appendChild(hero)
     hero.appendChild(p)
     info.append(address, map, openHours)
   }
 
-  addContent()
+  const removeContent = () => {
+    const container = document.querySelector('.container')
+    container.remove()
+  }
+
+  return { addContent, removeContent }
 }
