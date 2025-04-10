@@ -10,7 +10,7 @@ export default function PageLoad() {
     const address = document.createElement('div')
     const map = document.createElement('div')
     const openHours = document.createElement('div')
-    container.classList.add('container')
+    container.classList.add('page-container')
     background.classList.add('background')
     hero.classList.add('hero')
     info.classList.add('info')
@@ -30,8 +30,8 @@ export default function PageLoad() {
   }
 
   const removeContent = () => {
-    const container = document.querySelector('.container')
-    container.remove()
+    const pageContainer = document.querySelector('.page-container')
+    pageContainer.remove()
   }
 
   return { addContent, removeContent }

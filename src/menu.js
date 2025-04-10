@@ -76,7 +76,7 @@ export default function DisplayMenu() {
 
   const addMenu = () => {
     const container = document.querySelector('#content')
-    const menuContainer = document.createElement('menu-container')
+    const menuContainer = document.createElement('div')
     const menuHeading = document.createElement('h1')
     const menuDiv = document.createElement('div')
 
@@ -115,10 +115,10 @@ export default function DisplayMenu() {
     })
   }
 
-  const removeMenu = () => {
+  const removeContent = () => {
     const menu = document.querySelector('.menu-container')
     menu.remove()
   }
 
-  return { addMenu, removeMenu }
+  return { addMenu, removeContent }
 }
